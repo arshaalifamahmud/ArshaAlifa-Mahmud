@@ -1,18 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "barang.h"
 
-// Fungsi-fungsi
-void tambahBarang();
-void lihatDaftarBarang();
-void hapusBarang();
-void pembayaran();
-void tambahMember();
-void tambahPoinMember();
-void laporanPenjualan();
-void menu();
-
-// Fungsi untuk menambahkan barang
 void tambahBarang() {
     FILE *file = fopen("barang.txt", "a");
     if (file == NULL) {
@@ -39,7 +29,6 @@ void tambahBarang() {
     printf("Barang berhasil ditambahkan!\n");
 }
 
-// Fungsi untuk melihat daftar barang
 void lihatDaftarBarang() {
     FILE *file = fopen("barang.txt", "r");
     if (file == NULL) {
@@ -56,7 +45,6 @@ void lihatDaftarBarang() {
     fclose(file);
 }
 
-// Fungsi untuk menghapus barang
 void hapusBarang() {
     FILE *file = fopen("barang.txt", "r");
     FILE *temp = fopen("temp.txt", "w");
